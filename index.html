@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Ahmed - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: #e11d48;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #be185d;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #1f2937;
+            border: 1px solid #1f2937;
+        }
+        
+        .btn-outline:hover {
+            background-color: #1f2937;
+            color: white;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 9999px;
+        }
+        
+        .badge-primary {
+            background-color: #e11d48;
+            color: white;
+        }
+        
+        .badge-outline {
+            background-color: transparent;
+            color: #e11d48;
+            border: 1px solid #e11d48;
+        }
+        
+        .badge-secondary {
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        
+        .nav-backdrop {
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 nav-backdrop border-b border-gray-200 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-serif font-bold text-xl text-gray-800">Maryam Ahmed</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-rose-600 transition-colors">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-rose-600 transition-colors">Experience</a>
+                    <a href="#skills" class="text-gray-600 hover:text-rose-600 transition-colors">Skills</a>
+                    <a href="#education" class="text-gray-600 hover:text-rose-600 transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-600 hover:text-rose-600 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 text-center lg:text-left">
+                    <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-gray-800 mb-6">
+                        Empowering Solutions through Code
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">Backend Developer | Full-Stack Enthusiast | Global Citizen</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#experience" class="btn btn-primary">Explore My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="flex-shrink-0">
+                    <div class="w-80 h-80 rounded-full bg-gradient-to-br from-rose-100 to-rose-200 border-4 border-rose-600 overflow-hidden shadow-xl">
+                        <img src="maryam-profile.jpg" alt="Maryam Ahmed - Software Engineer" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="card">
+                    <div class="p-8">
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Engineering student with a passion for backend development, specializing in server-side programming,
+                            API integration, and database management. Skilled in problem-solving and applying programming
+                            principles to create efficient, scalable solutions.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Currently pursuing my studies through an international exchange program at Hochschule Heilbronn in
+                            Germany, expanding my global perspective while deepening my expertise in modern backend technologies.
+                            Eager to contribute to innovative projects that make a meaningful impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">Professional Experience</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="space-y-8">
+                <div class="card border-l-4 border-l-rose-600">
+                    <div class="p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl text-gray-800 font-semibold">FullStack Developer</h3>
+                            <span class="badge badge-secondary">Jul 2025 – Aug 2025</span>
+                        </div>
+                        <p class="text-rose-600 font-semibold mb-4">NTI (National Telecommunication Institute)</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Completed Full Stack Development training with emphasis on backend technologies</li>
+                            <li>• Designed and implemented RESTful APIs, managed relational/non-relational databases</li>
+                            <li>• Applied version control (Git/GitHub) and best practices to deliver secure, scalable backend solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-l-4 border-l-rose-600">
+                    <div class="p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl text-gray-800 font-semibold">DevOps Trainee</h3>
+                            <span class="badge badge-secondary">Apr 2025 – Present</span>
+                        </div>
+                        <p class="text-rose-600 font-semibold mb-4">Pyramakerz</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Completed DevOps training with focus on cloud infrastructure and automation</li>
+                            <li>• Acquired foundational skills in AWS, including EC2 setup, S3 management, and basic networking</li>
+                            <li>• Learned CI/CD concepts and containerization basics for scalable deployments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-l-4 border-l-rose-600">
+                    <div class="p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl text-gray-800 font-semibold">Flutter Developer</h3>
+                            <span class="badge badge-secondary">Aug 2023</span>
+                        </div>
+                        <p class="text-rose-600 font-semibold mb-4">RunProof</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Completed Flutter development training for cross-platform mobile applications</li>
+                            <li>• Developed UI layouts, integrated widgets, and connected apps to backend services via APIs</li>
+                            <li>• Gained experience in state management, app navigation, and deploying to Android and iOS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">Technical Proficiencies</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2 mb-4">
+                            <i class="fas fa-code text-rose-600"></i>
+                            Programming Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-outline">C</span>
+                            <span class="badge badge-outline">Java</span>
+                            <span class="badge badge-outline">PHP</span>
+                            <span class="badge badge-outline">JavaScript</span>
+                            <span class="badge badge-outline">Dart</span>
+                            <span class="badge badge-outline">HTML</span>
+                            <span class="badge badge-outline">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2 mb-4">
+                            <i class="fas fa-tools text-rose-600"></i>
+                            Frameworks & Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-outline">Laravel</span>
+                            <span class="badge badge-outline">Flutter</span>
+                            <span class="badge badge-outline">Bootstrap</span>
+                            <span class="badge badge-outline">jQuery</span>
+                            <span class="badge badge-outline">GitHub</span>
+                            <span class="badge badge-outline">MySQL</span>
+                            <span class="badge badge-outline">MATLAB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2 mb-4">
+                            <i class="fas fa-lightbulb text-rose-600"></i>
+                            Concepts & Methodologies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-outline">OOP</span>
+                            <span class="badge badge-outline">Database Design</span>
+                            <span class="badge badge-outline">Advanced Algorithms</span>
+                            <span class="badge badge-outline">RESTful APIs</span>
+                            <span class="badge badge-outline">Version Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2 mb-4">
+                            <i class="fas fa-globe text-rose-600"></i>
+                            Languages
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Arabic</span>
+                                <span class="badge badge-primary">Native</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">English</span>
+                                <span class="badge badge-outline">B1</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">German</span>
+                                <span class="badge badge-outline">A1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">A Journey Beyond Borders</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="space-y-8">
+                <div class="card border-l-4 border-l-rose-600">
+                    <div class="p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2">
+                                <i class="fas fa-graduation-cap text-rose-600"></i>
+                                Software Engineering, Bachelor
+                            </h3>
+                            <span class="badge badge-secondary">Sep 2024 – Present</span>
+                        </div>
+                        <p class="text-rose-600 font-semibold mb-4">Hochschule Heilbronn - Exchange Student</p>
+                        <p class="text-gray-600">
+                            Currently participating in an international exchange program in Germany, gaining valuable
+                            cross-cultural experience and exposure to European engineering practices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card border-l-4 border-l-rose-600">
+                    <div class="p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl text-gray-800 font-semibold flex items-center gap-2">
+                                <i class="fas fa-graduation-cap text-rose-600"></i>
+                                Computer Engineering
+                            </h3>
+                            <span class="badge badge-secondary">Sep 2021 – Present</span>
+                        </div>
+                        <p class="text-rose-600 font-semibold mb-4">Pharos University - Home University</p>
+                        <div class="flex items-center gap-4">
+                            <p class="text-gray-600">GPA: 3.94</p>
+                            <span class="badge badge-primary">Excellent Academic Standing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">Achievements & Recognition</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-award text-rose-600 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Academic Achievement - Erasmus Program</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Recognition for exemplary academic achievement during the Erasmus+ program at Heilbronn University
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-award text-rose-600 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Engineering Excellence Day 2023-2024</h3>
+                                <p class="text-gray-600 text-sm">Academic accomplishment recognition at Pharos University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-users text-rose-600 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Head Logistics (Ex-HR Head)</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Leadership role at The Student Branch, Pharos University Computer Department
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-industry text-rose-600 text-xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Industrial Training</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Alexandria National Refining and Petrochemical Company - Computer Specialty
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-800 mb-4">Let's Connect</h2>
+                <div class="w-20 h-1 bg-rose-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="card">
+                    <div class="p-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <i class="fas fa-envelope text-rose-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Email</p>
+                                        <a href="mailto:ma2792002@gmail.com" class="text-gray-600 hover:text-rose-600 transition-colors">
+                                            ma2792002@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <i class="fas fa-phone text-rose-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Phone</p>
+                                        <a href="tel:+201203698820" class="text-gray-600 hover:text-rose-600 transition-colors">
+                                            +20 120 369 8820
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <i class="fas fa-map-marker-alt text-rose-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Location</p>
+                                        <p class="text-gray-600">Alexandria, Egypt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <i class="fab fa-linkedin text-rose-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">LinkedIn</p>
+                                        <a href="https://linkedin.com/in/maryam-ahmed-2577b0266" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-rose-600 transition-colors flex items-center gap-1">
+                                            Connect with me <i class="fas fa-external-link-alt text-xs"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <i class="fab fa-github text-rose-600 text-xl"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">GitHub</p>
+                                        <a href="https://github.com/maryamahmed279" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-rose-600 transition-colors flex items-center gap-1">
+                                            View my projects <i class="fas fa-external-link-alt text-xs"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <a href="mailto:ma2792002@gmail.com" class="btn btn-primary">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Send me a message
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-300">© 2025 Maryam Ahmed Hussien Gaber. Crafted with passion for innovation.</p>
+        </div>
+    </footer>
+</body>
+</html>
